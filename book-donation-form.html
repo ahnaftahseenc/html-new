@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Donation Form</title>
+
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+
+  <form>
+
+  <div style="width: 100%; border:0% solid maroon; background-color: royalblue; height:100%">
+
+
+
+    <h1>📚 Book Donation Form</h1>
+      
+     <p>Fill in the form below to donate books to the library! </p>
+        <hr>
+
+        
+
+    <fieldset>
+        
+       <legend>Donor Details: </legend>
+
+
+
+         <label>Your Name: </label>
+                 <br>
+                  
+             <input type="text" id ="name" placeholder="Enter your full name" required><br></br>
+
+
+          <label>Donor ID: </label>
+                 <br>
+              <input type="password" id="donor-id" placeholder="Enter your donor ID" required><br><br>
+
+         <label>Donation Date: </label><br>
+
+              <input type="date" id="donation-date"><br>
+
+
+     </fieldset>
+
+            <br>
+    
+             
+    <fieldset>
+        <legend>Book Details: </legend>
+
+          <label>Choose Book Category: </label>
+      <select id="category">
+          <option value="">-- select a category --</option>
+
+          <option value="fiction">Fiction</option>
+          <option value="science">Science</option>
+          <option value="history">Education</option>
+          <option value="economics">Economics</option>
+          <option value="International geography">International Geography</option>
+          <option value="thrileer & crime">Thriller and Crime</option>
+
+      </select><br><br>
+
+         <label>Book Condition: </label><br>
+            <input type="radio"
+            name="condition" value="new" required>Like New<br>
+
+            <input type="radio" name="condition" value="good" required>Good<br>
+
+            <input type="radio"
+             name="condition" value="used" required>Used<br><br>
+
+
+        <label>Book Title or Additional Notes: </label><br>
+
+            <textarea id="notes" rows="3" cols="35" placeholder="e.g. The book title, author name, or any notes. "></textarea><br>
+
+    </fieldset>
+
+      <br>
+
+    <fieldset>
+
+        <legend>Preffered Drop-off Day: </legend>
+
+
+        <input type="checkbox" name="day" value="mon">Monday<br>
+        <input type="checkbox" name="day" value="wed">Wednesday<br>
+        <input type="checkbox" name="day" value="fri">Friday<br>
+
+    </fieldset>
+
+
+
+      <br>
+
+      <input type="submit" value="Donate My Book">
+
+
+      </form>
+
+    
+  </body>
+
+</html>
