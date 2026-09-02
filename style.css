@@ -1,0 +1,90 @@
+/* Import modern font (optional, falls back to sans-serif) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg-space: #0b0e14;
+  --card-bg: #1a2332;
+  --title-color: #00e5ff;
+  --text-color: #ffffff;
+  --text-muted: #94a3b8;
+  --accent-gold: #ffd166;
+}
+
+body { 
+  background-color: var(--bg-space);
+  background-image: radial-gradient(circle at top center, #141c2b 0%, var(--bg-space) 70%);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #1e1b4b, #311042);
+  border-radius: 16px;
+  text-align: center;
+  color: var(--text-color);
+  padding: 32px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.page-header h1 {
+  color: var(--title-color);
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+}
+
+.fact-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  color: var(--text-color);
+  padding: 24px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.fact-card h2 {
+  color: var(--title-color);
+  margin-top: 0;
+  letter-spacing: 0.5px;
+}
+
+.fact-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.star {
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 16px var(--accent-gold);
+  animation: twinkle 2s infinite alternate ease-in-out;
+  margin-top: 16px;
+}
+
+@keyframes twinkle {
+  from {
+    transform: scale(0.95);
+    box-shadow: 0 0 8px var(--accent-gold);
+  }
+  to {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--accent-gold), 0 0 35px rgba(255, 209, 102, 0.5);
+  }
+}
+
+.footer-text {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 40px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
