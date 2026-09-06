@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
+
+#myh1 {
+  font-family: "system-ui", cursive;
+  font-size: 50px;
+  font-weight: 800;
+  color: #33cc75;
+  text-decoration: none;
+
+  text-transform: uppercase;
+  text-shadow: 5px 8px 4px rgb(2, 92, 20);
+}
+
+body {
+  background-color: rgb(180, 30, 226);
+}
+
+a {
+  text-decoration: none;
+}
+
+.mydiv {
+  width: 350px;
+  height: 540px;
+  background-color: rgb(239, 239, 175);
+  transform: scale(3.5);
+  transform: translate(300px, 300px);
+  animation-name: mymove;
+  animation-duration: 20s;
+}
+
+@keyframes mymove {
+  0% {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(239, 239, 175);
+  }
+
+  25% {
+    transform: translate(135px, 150px);
+  }
+
+  50% {
+    transform: translate(305px, 190px);
+    background-color: rgb(50, 50, 243);
+    scale: (3.5);
+  }
+
+  75% {
+    transform: translate(0px, 250px);
+    background-color: rgb(113, 5, 5);
+    rotate: (58deg);
+  }
+
+  100% {
+    transform: translate(431px, 0px);
+    background-color: rgb(11, 67, 107);
+    scale: (0.5);
+  }
+}
