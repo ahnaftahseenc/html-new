@@ -1,61 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cartoon Character Card: </title>
+
+    <title>Adventure Park Challenge : </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
     <style>
-       
-       /* Universal Selector-applies to everything on the page */
+        body{
+         background-color: #062c3d;
+         color: #e8f8fa;
+         font-family: 'Trebuchet MS', Arial, sans-serif;
+         text-align: center;
+         padding: 26px;
+        }
+
+        h1{
+         font-family: 'Times New Roman', Times, serif;
+         color : #5eead4;
+        }
+
+        h2 {
+         font-family: 'Times New Roman', Times, serif;   
+         color: #ffffff;
+         margin-top: 27px;
+        }
+
+        h3{
+         color:#e0f2fe;
+         font-family: 'Times New Roman', Georgia, 'Times New Roman';
+        }
+
+        small {
+         color: #68b2ca;
+         font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        dl{
+         text-align: left;
+         display: inline-block;
+        }
+
+        dt{
+         color: #5eead4;
+         font-weight: bold;
+        }
+
+        dd{
+         font-family: Georgia, Times, 'Times New Roman', serif;
+         color: #d0e7ed;
+        }
+
+        mark{
+         background-color: #f4c95d;
+         color: #062c3d;
+         padding: 3px 8px;
+         border-radius: 6px;
+        }
+
+        code{     
+         font-family: 'Consolas', monospace;
+         background-color: #021b27;
+         color: #48d8eb;
+         padding: 2px 7px;
+         border-radius: 4px;
+         font-size: 18px;
+        }
+
+        abbr{
+         color: #58edd7;
+         font-weight:bold;
+         cursor: help;
+        }
+
+        pre{
+         font-family: 'Consolas', monospace;
+         background-color: #021b27;
+         color: #67e8f9;
+         padding: 15px;
+         border-radius: 13px;
+         display: inline-block;
+         text-align: right;
+        }
 
 
-       * {font-size: 18px}
+        blockquote{
+         border-left: 6px solid #5eead4;
+         padding-left: 15px;
+         color: #b8d8e0;
+         font-style: italic;
+         display: inline-block;
+         text-align: left;
+        }
 
-       /* Element Selectors */
+        hr {
+         border-color: #176b87;
+         margin: 32px 0;
+        }
 
-        body{ background-color:lightyellow;}
+        p{
+         line-height: 1.6 ;
+        }
 
-        h1{ color: darkblue;}
+        .adventure-card{
+         background-color: #083d52;
+         border: 2px solid #176b87;
+         border-radius: 15px;
+         padding: 18px;
+         margin: 16px auto;
+         max-width: 750px0;
+        }
 
-        h2{ color: purple;}
+        .adventure-card :hover {
+         background-color: #0a4a61;
+        }
 
-        p{ color: dimgray;}
 
-        /* class slector */
+        .badge-custom{
+         background-color: #f4c95d;
+         color: #062c3d;
+         padding: 7px 14px;
+         border-radius: 18px;
+        }
 
-        .cartoon-detail { color: darkgreen; font-weight: bold;}
 
-        /* ID selector */
+        .game-btn {
+            margin: 6px;
+            border-radius: 24px;
+            padding: 10px 20px;
+            font-weight:bold;
+        }
 
-        #cartoon-card{ background-color: lightcyan}
-        
+        .score-box {
+            background-color: #021B27;
+            border: 2px solid #5EEAD4;
+            border-radius: 8px;
+            padding: 18px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .score {
+            color: #F4C95D;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+
+        .progress {
+            height: 26px;
+            background-color: #021B27;
+        }
+
+        .progress-bar {
+            background-color: #5EEAD4;
+            color: #062C3D;
+            font-weight: bold;
+        }
+
+
+
+        .mission{
+         background-color: #021b27;
+         padding: 16px;
+         border-radius: 8px;
+         margin: 12px auto;
+         max-width: 655px;
+        }
+
+
     </style>
 </head>
+
 <body>
-    
-    <h1>My Cartoon Character Card</h1>
 
-        <!-- Inline CSS -->
-        <p style="color: crimson;">Meet My Favourite Cartoon Character!</p>
 
-        <div id="cartoon-card">
+    <h1>🌊 Welcome to Ocean Quest! </h1>
 
-      <h2>About My Character</h2>        
 
-         <p class="cartoon-detail">Character Name: Doraemon</p>
-         <p class="cartoon-detail">Best Friend: Nobita</p>
-         <p class="cartoon-detail">Favourite Food: Dorayaki</p>
-         <p class="cartoon-detail">Special Power: Future Gadgets</p>
+    <p>
+        Explore mysterious islands, discover hidden treasures, complete missions and become the ultimate ocean explorer.
+    </p>
+
+    <a href="#missions"
+       class="btn btn-info game-btn">
+       🚀 Begin Expedition
+    </a>
+
+    <hr>
+
+
+    <!-- Explorer Status -->
+
+    <h2> 🏆 Explorer Status</h2>
+
+    <div class="score-box">
+
+        <p> Your Current Score :</p>
+
+        <div class="score">
+            85
+        </div>
+
+        <p>Adventure Progress : </p>
+
+        <div class="progress">
+            <div class="progress-bar"
+              style="width: 85%;">
+
+              85%
+
+            </div>
 
         </div>
 
-     <h2>Why I Like This Character</h2>
+
+        <br>
+
+
+        <span class="badge-custom">
+         🥇 Advanced Explorer
+        </span>
+
+
+    </div>
+
+    <hr>
+
+
+    <!-- Adventure missions -->
+
+    <h2 id="missions"> 🗺️ Adventure Missions :</h2>
+
+
+    <div class="adventure-card">
+
+        <h3>🏝️ Mystery Island </h3>
 
         <p>
-            Doraemon is kind, helpful, and funny.
+            Explore a mysterious island and search for the legendary Explorer Crystal.
         </p>
-        <p>He always tries to help his friends solve problems</p>
-        <p>He teaches us about friendship and creativity.</p>
+
+
+        <span class="badge badge-info">
+
+            +15 points
+
+        </span>
+
+
+        <br>
+
+        <a href="#dive"
+           class="btn btn-outline-info game-btn ">
+           Start Dive
+
+        </a>
+
+
+    </div>
+
+
+    <div class="adventure-card">
+
+        <h3> Storm Mountain</h3>
+
+        <p>
+            Climb the muysterious mountain and reach the hidden explorer checkpoint.
+        </p>
+
+        <span class="badge badge-success pt-2 pb-2">
+            
+            +15 points 
+            
+        </span>
+
+        <br><br>
+
+        <a href="#mountain"
+           class="btn btn-outline-success game-btn">
+         Climb Mountain
+        </a>
+
+
+    </div>
+
+    <hr>
+
+
+    <!-- Choose Your path -->
+
+    <h2>🧭 Choose Your Path :</h2>
+
+    <p>
+        You discover two mysterious paths.
+        Which adventure would you choose?
+    </p>
+
+
+    <div  style="background-image: linear-gradient(98deg, #042636, #056794);
+    border-radius: 12px;">
+
+        <h3>🔵 Crystal Cave</h3>
+
+        <p>
+            A glowing cave filled with mysterious crystals.
+        </p>
+
+        <button class="btn btn-primary game-btn">
+            Enter Cave
+        </button>
+
+    </div>
+   
+    <br>
+
+    <div 
+      style="background-image: linear-gradient(98deg, #042636, #056794);
+       border-radius: 12px;">
+
+       <h3>🟢 Hidden Waterfall</h3>
+
+       <p>
+        A secret waterfall hiding an ancient explorer map.
+       </p>
+
+       <button class="btn btn-success game-btn">
+         Explore Waterfall
+       </button>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- Treasure Collection -->
+
+    <h2> 💎 Treasure Collection</h2>
+
+    <div class="row">
+
+        <div class="col-md-4  mb-4 ">
+
+            <div style="background-image: linear-gradient(98deg, #042636, #056794);
+            border-radius: 12px;">
+
+            <br>
+
+            <h3> 💎 </h3>
+
+            <h4> Ocean Crystal</h4>
+
+            <small>
+                Rare Treasure
+            </small>
+
+            <br><br>
+
+            <span class="badge badge-info mb-3">
+                Collected
+            </span>
+
+
+            </div>
+       
+        </div>
+
+        
+
+        
+
+        
+       
+
+        <div class="col-md-4 mb-4">
+
+            <div style="background-image: linear-gradient(98deg, #042636, #056794);
+            border-radius: 12px;
+            padding-top: 2px;">
+
+            <br>
+
+            <h3>🗝️</h3>
+
+            <h4>Ancient Key</h4>
+
+            <small>
+                Mystery Item
+            </small>
+
+            <br><br>
+
+            <span class="badge badge-warning mb-3">
+                Locked
+            </span>
+
+            </div>
+
+        </div>
+        
+        <br><br>
+
+        <div class="col-md-4  mb-4">
+            <div style="background-image: linear-gradient(98deg, #042636, #056794);
+            border-radius: 12px;">
+
+            <br>
+
+            <h3>🧭</h3>
+
+            <h4>Explorer Compass</h4>
+
+            <small>
+                Navigation Tool
+            </small>
+
+            <br><br>
+
+            <span class="badge badge-success mb-3">
+                Collected
+            </span>
+
+
+            </div>
+
+        </div>
+
+        
+    </div>
+
+
+    <hr>
+
+
+
+    <!-- Adventure Ranks -->
+
+    <h2>🎖️ Explorer Ranks</h2>
+
+    <dl>
+
+        <dt>🥉 Rookie Explorer</dt>
+
+        <dd>
+            Complete your first adventure.
+        </dd>
+
+        <dt>
+           🥈 Advanced Explorer
+        </dt>
+
+        <dd>
+            Discover 3 different locations.
+        </dd>
+
+        <dt> 🥇 Master Explorer</dt>
+
+        <dd>
+            Collect 5 treasures.
+        </dd>
+
+        <dt> 🏆 Legendary Explorer</dt>
+
+        <dd>
+            Complete the ultimate Ocean Quest.
+        </dd>
+
+    </dl>
+
+
+    <hr>
+
+
+    <!-- Explorer Commands -->
+
+    <h2>💻 Explorer Commands</h2>
+
+    <p>
+        Start Mission : 
+        <code>mission.start()</code> 
+    </p>
+
+
+    <p>
+        Scan island:
+        <code>island.scan()</code>
+    </p>
+
+    <p>
+        Unlock treasure:
+        <code>treasure.unlock()</code>
+    </p>
+
+    <p>
+        Check explorer status:
+        <code>explorer.status()</code>
+    </p>
+
+
+    <hr>
+
+
+    <!-- Daily schedule -->
+    
+    <h2>⏰ Expedition Schedule : </h2>
+
+    <pre> 
+     09:00 AM - Explorer Check-in
+     10:00 AM - Mystery Island   
+     11:30 AM - Deep Blue Dive   
+     01:00 PM - Explorer Lunch   
+     02:00 PM - Storm Mountain   
+     04:00 PM  -  Treasure Hunt  
+     05:00 PM  -  Explorer Badge 
+    </pre>
+
+
+    <hr>
+
+    <!-- Safety -->
+
+    <h2>⚓ Ocean Safety : </h2>
+
+    <div class="mission">
+        <p>
+            Always wear your safety equipment before starting an expedition. 
+        </p>
+
+        <p>
+            Stay inside the marked adventure zones.
+        </p>
+
+        <p>
+            Follow the instructions of the Adventure Park Team.
+        </p>
+
+    </div>
+
+    <hr>
+
+    <!-- Quote -->
+
+    <h2>🌅 Explorer's Quote : </h2>
+
+    <blockquote style="color:#8abcee">
+
+        <p>
+            "Every great adventure begins with one brave step."
+        </p>
+
+        <footer>
+            ~~ Vibe Quote
+        </footer>
+
+
+    </blockquote>
+
+
     
 </body>
 </html>
