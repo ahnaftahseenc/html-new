@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resturant Menu Card</title>
+
+    <style>
+        body{
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         color: #f5f0e6;  
+         margin: 0px;
+         padding: 40px 15px;   
+         background:    
+         radial-gradient(circle at top, #29323c, #11151a 70%); 
+        }
+
+        .menu-section:hover { 
+             transform: translateY(-3px); border-color: #c9a45c; 
+             box-shadow: 0 8px 20px rgba(0,0,0,0.35); 
+            }
+
+        .restaurant-name { 
+             margin: 0; 
+             font-size: 45px; 
+             text-align: center; 
+             text-transform: uppercase; 
+             letter-spacing: 5px; 
+             color: #d7b56d; 
+             text-shadow: 0 0 10px rgba(215,181,109,0.4); 
+            }
+
+
+        .menu-card{
+              width: 90%;
+              max-width: 650px;
+              margin: auto;
+             padding:30px;
+             border: 1px solid #c9a45c;
+        }
+
+        .tagline {
+             margin-top: 8px; 
+             text-align: center; 
+             font-size: 17px; 
+             font-style: italic; 
+             color: #c7c0b2; 
+             letter-spacing: 1px; 
+            }
+
+        .price { 
+             float: right; 
+             color: #d7b56d; 
+             font-weight: bold;
+            }
+
+        .section-title{
+         margin-top: 0;
+         font-size: 27px;
+         color: #d7b56d;
+         text-transform: uppercase;
+         letter-spacing: 3px;
+         border-bottom: 1px solid #514936;
+         padding-bottom: 12px;
+        }
+
+        .dish-name{
+         margin-bottom: 5px;
+         font-size: 20px;
+         font-weight: bold;
+         color: #ffffff;
+         transition: 0.5s;
+        }
+
+        .dish-name:hover { 
+             color: #d7b56d; 
+             transform: translateX(11px); 
+            
+            
+            }
+
+        .dish-description{
+             margin-top: 0px;
+              margin-bottom: 16px;
+             font-family: Arial, Helvetica, sans-serif;
+             font-size: 14px;
+             line-height: 1.6;
+             color: #aaa9a5;
+        }
+
+        .footer{
+         margin-top: 25px;
+         text-align: center;
+         font-family: Arial, sans-serif;
+         font-size: 14px;
+         color: #777;
+         letter-spacing: 2px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="menu-card">
+        <h1 class="restaurant-name">
+            Midnight Bistro
+        </h1>
+
+        <p class="tagline">
+            Fine flavors, Timeless moments.
+        </p>
+
+        <div class="divider"></div>
+
+
+        <div class="menu-section">
+
+            <h2 class="section-title">
+                Starters : 
+            </h2>
+
+            <p class="dish-name">
+                Truffle Garlic Bread
+                <span class="price">৳280</span>
+            </p>
+            <p class="dish-description"> 
+                Golden toasted bread with garlic butter, herbs, cheese and a touch of truffle. 
+            </p> 
+            
+            <p class="dish-name"> 
+                Crispy Chicken Bites
+                <span class="price">৳320</span> 
+            </p> 
+            
+            <p class="dish-description"> 
+                Tender chicken pieces with a crispy coating, served with our signature dip. 
+            </p> 
+        
+        </div>
+
+
+        <div class="menu-section"> 
+
+
+            <h2 class="section-title"> 
+                Main Course 
+            </h2> 
+
+
+            <p class="dish-name"> 
+                Creamy Alfredo Pasta 
+                <span class="price">৳450</span> 
+            </p> 
+            
+            <p class="dish-description"> 
+                Silky creamy sauce, perfectly cooked pasta, herbs and parmesan cheese. 
+            </p>
+            
+            <p class="dish-name"> Classic Chicken Steak <span class="price">৳520</span> 
+            </p> 
+            
+            <p class="dish-description"> Juicy grilled chicken served with vegetables, mashed potatoes and signature sauce.                 
+            </p> 
+        
+        </div>
+
+
+        <div class="menu-section"> 
+            <h2 class="section-title"> 
+                Desserts 
+            </h2> 
+
+            <p class="dish-name"> 
+                Chocolate Lava Cake 
+                <span class="price">৳250</span> 
+            </p> 
+
+
+            <p class="dish-description"> 
+                Warm chocolate cake with a rich molten center, served with vanilla cream.
+            </p>
+        </div>
+
+
+        <div class="special-offer">
+            ✦ WEEKEND SPECIAL — 20% OFF ✦
+        </div>
+
+        <p class="footer">
+            MIDNIGHT BISTRO • GOOD FOOD • GREAT MOMENTS
+        </p>
+
+
+    </div>
+    
+</body>
+</html>
