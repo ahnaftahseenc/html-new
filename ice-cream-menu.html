@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ice Cream Shop Menu</title>
+
+    
+    <style>
+        body{
+         background-color: #fff4f8;
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         text-align: center;
+         color:aqua;
+        }
+
+        h1{
+         color: #d7125a;
+         font-size: 35px;
+        }
+
+        h1 + p{
+         color: #7e12e2;
+         font-weight: bold;
+         background-color: #8fc0f7;
+         border-radius: 8px;
+        }
+
+        .shop-description::first-letter{
+         font-size: 37px;
+         color: #ff1493;
+         font-weight: bold;
+        }
+
+        .menu-box{
+         width=450px;
+         background-color: bisque;
+         border: 3px solid #ff69b4;
+         border-radius: 15px;
+         margin: 20px auto;
+         padding: 20px;
+        }
+
+        ul{
+         padding: 0;
+        }
+
+        ul> li {
+         list-style:disc;
+         background-color: #f4b2c8;
+         color: #5c2a4a;
+         font-size: 18px;
+         font-weight: bold;
+         margin: 12px;
+         padding: 14px;
+         border-radius: 8px;
+         border: 3px solid #f9aab6;
+        }
+
+        ul > li:nth-child(3) {
+         background-color: #fce28c;
+         color: #b85c00;
+         border: 3px solid #ffab0f;
+        }
+
+        ul > li:hover {
+         background-color: #ff69b4;
+         color: whitesmoke;
+         border: none;
+         border-radius: 18px;
+         padding: 12px 24px;
+         font-size: 16px;
+         font-weight: bold;
+        }
+
+        button:hover{
+         background-color: #8a2be2;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>My Ice Cream Shop Menu</h1>
+    <p>
+        Welcome to Scoops of Joy! 
+    </p>
+
+    <p class="shop-description">
+        We serve colorful, creamy, and delicious ice cream flavours.
+    </p>
+    <div class="menu-box">
+        <h2>
+            Today's Ice Cream Flavours
+        </h2>
+
+        <ul>
+            <li>
+                Chocolate Delight
+            </li>
+            <li>
+                Strawberry Swirl
+            </li>
+            <li>
+                Mango Magic - Today's Special
+            </li>
+            <li>
+                Vanilla Dream
+            </li>
+            <li>
+                Blueberry Blast
+            </li>
+        </ul>
+
+        <button>Order Now!</button>
+    </div>
+
+    
+</body>
+</html>
