@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Safari Park</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            position: relative;
+            background: #082018;
+            color: rgb(237, 174, 174);
+        }
+
+        .safari-slide {
+            height: 220px;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            background: linear-gradient(135deg, #075ec3, #16a085);
+        }
+
+        .sec {
+            padding: 70px 25px;
+            min-height: 300px;
+        }
+
+        #wild {
+            background: #123d2a;
+        }
+
+        #river {
+            background: #064b63;
+        }
+
+        #forest {
+            background: #24512b;
+        }
+
+        .card {
+            background: #102b20;
+            color: white;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#nav">
+
+    <!-- CAROUSEL -->
+
+    <div id="safari" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active safari-slide">
+                <img src=https://static.vecteezy.com/system/resources/thumbnails/029/925/822/small/roaring-tiger-crossing-the-stream-ai-generated-free-photo.jpeg
+                    width="100%" height="220">
+            </div>
+
+            <div class="carousel-item safari-slide">
+                <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46"
+
+                    width="100%" height="220">
+            </div>
+
+            <div class="carousel-item safari-slide">
+                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+                
+                    width="100%" height="220">
+            </div>
+
+               <div class="carousel-item safari-slide">
+                <img src=https://cdn.conscious-explorer.com/keycdn/file/c1b6c438f1480f2b11b8ae4ecc0a434287ea87a953ec1877a02938d39ea07046/2x4FIc6kPDVXx3cI.jpg
+                
+                    width="100%" height="220">
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#safari" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#safari" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+
+    <!-- NAVBAR -->
+
+    <nav id="nav" class="navbar navbar-dark bg-dark sticky-top">
+
+        <b>🌿 My Safari</b>
+
+        <div class="navbar-nav flex-row">
+
+            <a class="nav-link mx-2" href="#wild">Wildlife</a>
+
+            <a class="nav-link mx-2" href="#river">Rivers</a>
+
+            <a class="nav-link mx-2" href="#forest">Forests</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- WILDLIFE -->
+
+    <div id="wild" class="sec">
+
+        <h2>🐅 Bengal Wildlife</h2>
+
+        <img src=
+         "https://images.unsplash.com/photo-1561731216-c3a4d99437d5"
+            width="400" height="220">
+
+        <p>
+            Meet tigers, elephants, deer and monkeys.
+        </p>
+
+        <div class="card p-3">
+
+            <h4>🐯 Royal Bengal Tiger</h4>
+
+            <p>
+                Bangladesh's iconic wild animal.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIVERS -->
+
+    <div id="river" class="sec">
+
+        <h2>🌊 Rivers of Bangladesh</h2>
+
+        <img src=
+         "https://www.virtualbangladesh.com/wp-content/uploads/2014/11/d5ur5wd3.bmp"
+            width="400" height="220">
+
+        <p>
+            Discover Bangladesh's rivers and wetlands.
+        </p>
+
+    </div>
+
+
+    <!-- FOREST -->
+
+    <div id="forest" class="sec">
+
+        <h2>🌳 Green Bangladesh</h2>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Save_the_sundarbans_20.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original"
+            width="400" height="220">
+
+        <p>
+            Explore forests and amazing biodiversity.
+        </p>
+
+    </div>
+
+
+    <!-- BOOTSTRAP JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
