@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Superhero Power Cards</title>
+
+    <style>
+
+        body{
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         background: #fe4444;
+         padding: 30px;
+         text-align: center;
+        }
+
+        h1 {
+         color: #790204;
+        }
+
+        p{
+         color: #480b0b;
+        }
+
+        .card{
+         background: #980cee;
+         border: 3px solid #5f025c;
+         border-radius: 12px;
+         padding: 20px;
+         width: 200px;
+        }
+
+        button{
+         background-color: #620202;
+         color: rgb(240, 240, 201);
+         border: none;
+         padding: 12px 28px;
+         border-radius: 8px;
+         cursor: pointer;
+         font-size: 16px;
+        }
+
+        .card-container{
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+         margin-top: 20px;
+         flex-wrap: wrap;
+        }
+
+        .hero-card{
+         background: #ff8a8a;
+         border: 2px solid #5f025c;
+         border-radius: 12px;
+         padding: 20px;
+         width: 200px;
+        }
+
+
+        .hero-name{
+         font-size: 20px;
+         font-weight: bold;
+         color: #222222;
+        }
+
+        .hero-power{
+         font-weight: bold;
+         color: #0057b8;
+        }
+
+        .hero-mission{
+         font-style: italic;
+         color: #666666;
+         font-size: 14px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>
+      <u>My Superhero Power Cards : </u>
+    </h1>
+
+    <p>
+        Click the button to create superhero objects using JavaScript classes.
+    </p>
+
+    <button onclick="showHeroes()">
+        Create Superhero Cards
+    </button>
+
+    <div class="card-container" id="heroCards"></div>
+
+    <script>
+
+        class superhero {
+            //constructor
+            constructor(name, power, mission) {
+
+                // the this keyword stores values inside the objects.
+
+                this.name = name;
+                this.power = power;
+                this.mission = mission;
+            }
+
+            // class methods
+
+            describeHero() {
+                return "<div class='hero-card'>"
+                    + "<p class='hero-name'>" + this.name + "</p>"
+                    + "<p class='hero-power'>Power: " + this.power + "</p>"
+                    + "<p class='hero-mission'>Mission: " + this.mission + "</p>"
+                    + "</div>";
+            }
+        }
+
+        function showHeroes(){
+
+            // creating objects
+
+            let hero1 = new superhero("captain code",
+                "Debugging errors",
+                "Fix broken programs and save the coding world."
+            );
+
+            let hero2 = new superhero(
+                "Pixel Flash",
+                "Super speed design",
+                "Build colourful websites in seconds."
+            );
+
+             let hero3 = new superhero(
+                "Pixel Flash",
+                "Super speed design",
+                "Build colourful websites in seconds."
+            );
+
+             let hero4 = new superhero(
+                "Data Knight",
+                "Data protection",
+                "Keep important information safe."
+            );
+
+            document.getElementById("heroCards").innerHTML =
+            hero1.describeHero() +
+            hero2.describeHero() +
+            hero3.describeHero() +
+            hero4.describeHero();
+
+        }
+
+
+    </script>
+
+
+    
+    
+</body>
+</html>
