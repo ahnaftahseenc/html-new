@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>
+            Event Registration Form
+        </title>
+
+        <style>
+
+            * { box-sizing: border-box; }
+
+         body {
+             margin: 0;
+             min-height: 100vh;
+             font-family: 'Jost', 'Segoe UI', sans-serif;
+             font-weight: 300;
+             color: var(--text);
+             text-align: center;
+             background:
+             radial-gradient(circle at 15% 10%, rgba(212, 175, 55, 0.14), transparent 40%),
+             radial-gradient(circle at 85% 90%, rgba(120, 90, 200, 0.14), transparent 45%),
+             linear-gradient(160deg, #0b0b10, #15141c 60%, #0b0b10);
+            }
+
+
+            .form-card {
+             width: 520px;
+             max-width: 92%;
+             margin: 50px auto;
+             padding: 40px 36px;
+             background: #ffffff0a;
+             border: 1px solid #d4af3773;
+             box-shadow: 0 30px 60px #0009, inset 0 0 0 6px #0b0b10, inset 0 0 0 7px #d4af3740;
+            }
+
+          h1 {
+                font-family: 'Cormorant Garamond', Georgia, serif;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                color: transparent;
+                -webkit-text-stroke: 1px #d4af3773;
+            }
+
+            label {
+            display: block;
+            text-align: left;
+            margin-top: 16px;
+            font-size: 0.72rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            }
+
+            input, select {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 4px;
+            font: inherit;
+            color: var(--text);
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #d4af3766;
+            outline: none;
+            }
+
+            input:focus, select:focus{ 
+                border-bottom-color: var(--soft); }
+               select option { background: #15141c;
+            }
+
+         button {
+            margin-top: 28px;
+            padding: 14px 38px;
+            font: 500 0.85rem 'Jost', sans-serif;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b88608;
+            cursor: pointer;
+            border: none;
+            background: linear-gradient(135deg, #b8912a, var(--soft), #b8912a);
+            transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            button:hover { transform: translateY(-2px); box-shadow: 0 12px 28px #c6a12866; }
+
+            #feedback {
+            margin-top: 28px;
+            padding: 16px;
+            line-height: 1.8;
+            border: 1px dashed #654f05e6;
+            }
+
+            #feedback.success { color: var(--soft); border: 1px solid var(--gold); background: #d4af3714; }
+            #feedback.error { color: #ffb4b4; border: 1px solid #c0475a; background: #a01e3226; }
+
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <div class="form-card">
+
+            <h1>
+                Event Registration Form
+            </h1>
+
+            <p>
+                Fill in the form to regitster for the school event and generate your event pass.
+            </p>
+
+            <form id="eventForm">
+
+                <label for="studentName">
+                    Student Name : 
+                </label>
+                <input 
+                 type="text"
+                 id="studentName"
+                 required
+                 minlength="4"
+                 placeholder="Enter Your Name">
+
+                 <br><br>
+
+
+                <label for="email">
+                    Email Address 
+                </label>
+                <input
+                 type="email"
+                 id="email"
+                 required
+                 placeholder="Enter Your Email">
+
+                 <br><br>
+
+                <label for="email">
+                    Age  
+                </label>
+                <input
+                 type="number"
+                 id="age"
+                 required
+                 min="8"
+                 max="18"
+                 placeholder="Enter Your Age">
+
+                 <br><br>
+
+                <label for="eventName">
+                    Choose Event
+                </label>
+                <select id="eventName" required>
+                      <option value="">Select an event</option>
+                     <option value="Science Fair">Science Fair</option>
+                     <option value="Coding Workshop">Coding Workshop</option>
+                     <option value="Art Competition">Art Competition</option>
+                     <option value="Sports Day">Sports Day</option>
+                </select> 
+                
+
+            <button type="button" onclick="registerEvent()">
+                Register Now
+            </button>     
+
+
+            </form>
+
+            <div id="feedback">
+                Waiting For Registration....
+            </div>
+            </div>
+
+
+            <script>
+
+                function registerEvent() {
+                    let form = document.getElementById("eventForm");
+                    let feedback = document.getElementById("feedback");
+
+                    try {
+
+                        // constrain validation api
+                        if(!form.checkValidity()) {
+                            throw form.reportValidity();
+                        }
+
+                        //accessing form data
+                        let studentName = document.getElementById("studentName").value;
+
+                        let email = document.getElementById("email").value;
+
+                        let age = Number(document.getElementById("age").value);
+
+                        let eventName = document.getElementById("eventName").value;
+
+                        // writing validation conditions
+                        if (studentName.length < 3) {
+                            throw "Name must have at least 3 characters.";
+                        }
+
+                        if (age < 8 || age > 18) {
+                            throw "Age must be between 8 and 18.";
+                        }
+
+                        if (eventName === "") {
+                            throw "Please select an event.";
+                        }
+
+                        // dom feedback before timer
+                        feedback.className = "";
+                        feedback.innerHTML = "Checking your registration details....";
+
+                        // Timers and random numbers
+                        setTimeout(function() {
+                            let passNumber = Math.floor(Math.random() * 9000) + 1000;
+
+                            feedback.className = "success";
+                            feedback.innerHTML = 
+                            "Registration Successful! <br>" + 
+                            "Student Name : " + studentName + "<br>" +
+                            "Email : " + email + "<br>" +
+                            "Age : " + age + "<br>" +
+                            "Event : " + eventName + "<br>" +
+                            "Your Event Pass Number : EVT- " + passNumber;
+                        }, 2500);
+ 
+                    } catch (error) {
+
+                        // DOM feedback for errors
+                        feedback.className = "error";
+
+                        if (error !== undefined) {
+                            feedback.innerHTML = "Registration Failed : " + error;
+                            
+                        } else { 
+                            feedback.innerHTML = "Please complete all the required feilds correctly!"
+                        }                        
+                    }
+                }
+            </script>
+
+
+        
+    </body>
+</html>
