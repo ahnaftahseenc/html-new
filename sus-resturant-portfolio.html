@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susan's Resturant</title>
+
+
+    <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+
+    body{background:#fffaf3;color:#333}
+    header{background:#b5412b;color:#e7cdcd;text-align:center;padding:25px}
+    section{
+        padding:40px 20px;
+        max-width:1000px;
+        margin:auto;
+        background-color: #f8dddd;
+    }
+    h2{text-align:center;color:#b5412b;margin-bottom:20px}
+
+
+    input[type=radio]{display:none}
+
+
+    .filters{text-align:center;margin-bottom:20px}
+
+    .filters label{display:inline-block;padding:8px 18px;margin:4px;border:2px solid #b5412b;background:#fff;
+    color:#b5412b;border-radius:20px;cursor:pointer;transition:.3s}
+    .filters label:hover,
+
+    #all:checked ~ .filters label[for=all],
+    #food:checked ~ .filters label[for=food],
+    #events:checked ~ .filters label[for=events],
+    #place:checked ~ .filters label[for=place]{background:#b5412b;color:#fff}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+    .item{height:150px;border-radius:10px;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;font-size:55px;cursor:pointer;transition:.3s;text-decoration:none;color:#333}
+  
+    .item:hover{transform:scale(1.07);box-shadow:0 4px 12px #0003}
+    .item{position:relative;overflow:hidden}
+    .item img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+    .item span{position:absolute;bottom:0;left:0;right:0;background:rgba(234, 107, 107, 0.667);color:#f4cdcd;
+    padding:6px;font-size:14px;margin:0}
+
+    
+    .popup:target{display:flex}
+    .popup{display:none;position:fixed;inset:0;background:#000b;align-items:center;
+    justify-content:center;z-index:10;text-decoration:none;color:#333}
+    .popup div{background:#fff;padding:40px;border-radius:15px;text-align:center;font-size:90px}
+    .popup span{display:block;font-size:18px;margin-top:10px}
+
+    .logo{display:flex;align-items:center;justify-content: center;margin-bottom:0px; gap:15px}
+    .logo img{width:90%;height:100%;object-fit:contain;border-radius:50%}
+    .footer {
+    background-color: #f8bbd0;
+    color: #b34f3b;
+    font-size: 10px;
+    text-align: end;
+    }
+
+   
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+        <h1>
+           <img  src="https://static.vecteezy.com/system/resources/thumbnails/034/067/744/small/initial-alphabet-s-with-chef-hat-spoon-and-fork-modern-logo-for-cafe-restaurant-cooking-business-and-company-identity-free-vector.jpg" style="width: 18%; height: 38%; "> 
+           Susan's Restaurant 
+        </h1>
+        </div>
+    </header>
+
+    <section>
+        <h2>
+            Our Portfolio
+        </h2>
+
+        <input type="radio" name="f" id="all" checked>
+        <input type="radio" name="f" id="food">
+        <input type="radio" name="f" id="events">
+        <input type="radio" name="f" id="place">
+
+
+        <div class="filters">
+            <label for="all">All</label>
+            <label for="all">Food</label>
+            <label for="all">Events</label>
+            <label for="all">Resturant</label>
+        </div>
+
+        <div class="gallery">
+        <a href="#p1" class="item food" style="background:#ffe0b2;">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/071/160/954/small/a-pepperoni-pizza-slice-shows-melting-cheese-with-basil-and-olive-toppings-on-orange-background-free-photo.jpg" alt="pizza"><span>Pizza Night</span></a>
+        <a href="#p2" class="item food"   style="background:#dcedc8">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/069/715/934/small/fresh-salad-with-creamy-dressing-being-poured-free-photo.jpeg" alt="fresh salad"><span>Fresh Salads</span></a>
+        <a href="#p3" class="item food"   style="background:#ffccbc">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/066/073/393/small/a-cake-is-being-sprayed-with-pink-sprinkles-photo.jpg" alt="signature cake"><span>Signature Cake</span></a>
+        <a href="#p4" class="item events" style="background:#d1c4e9">
+            <img src="https://png.pngtree.com/background/20250217/original/pngtree-elegant-wedding-decor-luxurious-reception-setup-with-floral-arrangements-and-candles-picture-image_15783639.jpg" alt="weeding event"><span>Wedding Event</span></a>
+        <a href="#p5" class="item events" style="background:#f8bbd0">
+            <img src="https://img.magnific.com/free-photo/table-arrangement-birthday-event-with-cake-sweets_23-2149312318.jpg?semt=ais_hybrid&w=740&q=80" alt="birthday party"><span>Birthday Party</span></a>
+        <a href="#p7" class="item place"  style="background:#ffe0b2"><img src="https://media.istockphoto.com/id/843610508/photo/interior-of-cozy-restaurant-loft-style.jpg?s=612x612&w=0&k=20&c=s_PVQJNzcilxKYpm3O-AxBMx4_om5G0TKuxUmiMl85Y=" alt="cozy dining hall"><span>Cozy Dining Hall</span></a>
+  </div>
+</section>
+
+<!-- Popups (click anywhere to close ) -->
+
+   <a href="#" class="popup" id="p1"><div> <img src="https://static.vecteezy.com/system/resources/thumbnails/071/160/954/small/a-pepperoni-pizza-slice-shows-melting-cheese-with-basil-and-olive-toppings-on-orange-background-free-photo.jpg" alt="pizza"><span>Pizza Night</span></div></a>
+    <a href="#" class="popup" id="p2"><div><img src="https://static.vecteezy.com/system/resources/thumbnails/069/715/934/small/fresh-salad-with-creamy-dressing-being-poured-free-photo.jpeg" alt="fresh salad"><span>Fresh Salads</span></div></a>
+    <a href="#" class="popup" id="p3"><div><img src="https://static.vecteezy.com/system/resources/thumbnails/066/073/393/small/a-cake-is-being-sprayed-with-pink-sprinkles-photo.jpg" alt="signature cake"><span>Signature Cake</span></div></a>
+    <a href="#" class="popup" id="p4"><div><img src="https://png.pngtree.com/background/20250217/original/pngtree-elegant-wedding-decor-luxurious-reception-setup-with-floral-arrangements-and-candles-picture-image_15783639.jpg" alt="weeding event"><span>Wedding Event</span></div></a>
+    <a href="#" class="popup" id="p5"><div><img src="https://img.magnific.com/free-photo/table-arrangement-birthday-event-with-cake-sweets_23-2149312318.jpg?semt=ais_hybrid&w=740&q=80" alt="birthday party"><span>Birthday Party</span></div></a>
+    <a href="#" class="popup" id="p7"><div><img src="https://media.istockphoto.com/id/843610508/photo/interior-of-cozy-restaurant-loft-style.jpg?s=612x612&w=0&k=20&c=s_PVQJNzcilxKYpm3O-AxBMx4_om5G0TKuxUmiMl85Y=" alt="cozy dining hall"><span>Cozy Dining Hall</span></div></a>
+
+    <footer class="footer"> 
+        Developed by Tahseen IT Lab.
+    </footer>
+    
+</body>
+</html>
