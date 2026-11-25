@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+
+            *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+            html{scroll-behavior:smooth}
+            body{background:#fffaf3;color:#333}
+            .nav{
+                position:sticky;top:0;z-index:20;
+                background:#b5412b;color:#e7cdcd;
+                display:flex;align-items:center;justify-content:space-between;
+                padding:10px 25px;box-shadow:0 2px 8px #0003;
+            }
+            .nav-logo{
+                display:flex;align-items:center;gap:10px;color:#e7cdcd;text-decoration:none;font-size:22px;font-weight:bold;
+            }
+            .nav-logo img{
+                width:46px;height:46px;border-radius:50%;object-fit:cover;background:#fff;
+            }
+
+            .nav-links{
+                display:flex;align-items:center;gap:22px;list-style:none
+            }
+            .nav-links a{
+                color:#f4cdcd;text-decoration:none;font-size:16px;padding:6px 0;
+                border-bottom:2px solid transparent;transition:.3s;
+            }
+            .nav-links a:hover{color:#fff;border-bottom-color:#fff}
+            .nav-links a.book{background:#fff;color:#b5412b;padding:9px 18px;border-radius:20px;
+                border-bottom:none;font-weight:bold}
+            .nav-links a.book:hover{
+                background:#f8dddd;
+            }
+
+
+               /* ================= BANNER ================= */
+    .banner{
+        min-height:480px;
+        background:
+            linear-gradient(rgba(60,15,8,.62),rgba(60,15,8,.62)),
+            url("https://media.istockphoto.com/id/843610508/photo/interior-of-cozy-restaurant-loft-style.jpg?s=612x612&w=0&k=20&c=s_PVQJNzcilxKYpm3O-AxBMx4_om5G0TKuxUmiMl85Y=")
+                center/cover no-repeat;
+            display:flex;flex-direction:column;align-items:center;justify-content:center;
+            text-align:center;color:#fff;padding:60px 20px;
+        }
+        .banner h1{
+            font-size:clamp(34px,6vw,60px);margin-bottom:15px;line-height:1.1;
+        }
+        .banner p{
+            font-size:clamp(16px,2.5vw,22px);color:#f4cdcd;max-width:550px;margin-bottom:28px
+        }
+        .banner-buttons{display:flex;gap:15px;flex-wrap:wrap;justify-content:center}
+        .btn{display:inline-block;padding:12px 28px;border-radius:25px;text-decoration:none;
+            font-weight:bold;border:2px solid #fff;transition:.3s}
+        .btn.primary{
+            background:#fff;color:#b5412b;
+        }
+        .btn.primary:hover{background:#f8dddd}
+        .btn.outline{color:#fff}
+        .btn.outline:hover{background:#fff;color:#b5412b}
+
+
+        #menu-toggle{
+            display:none;
+        }
+        .hamburger{
+            display:none;font-size:30px;cursor:pointer;color:#fff;user-select:none;
+        }
+
+            @media (max-width:760px){
+                .hamburger{display:block}
+                .nav-links{
+                    display:none;position:absolute;top:100%;left:0;right:0;
+                    flex-direction:column;gap:0;background:#b5412b;padding:10px 25px 20px;
+                }
+                .nav-links li{
+                    width:100%;padding:10px 0;
+                }
+                #menu-toggle:checked ~ .nav-links{display:flex}
+            }
+
+
+
+    </style>
+    
+</head>
+<body>
+
+    <nav class="nav">
+        <a href="#home" class="nav-logo">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/034/067/744/small/initial-alphabet-s-with-chef-hat-spoon-and-fork-modern-logo-for-cafe-restaurant-cooking-business-and-company-identity-free-vector.jpg" alt="Susan's Resturant logo">
+            Susan's Resturant
+        </a>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger" aria-label="Open menu">&#9776;</label>
+
+        <ul class="nav-links">
+            <li><a href="#home">
+                Home
+            </a></li>
+            <li><a href="#menu">
+                Menu
+            </a></li>
+            <li><a href="#gallery">
+                Gallery
+            </a></li>
+            <li><a href="sus-resturant-portfolio.html">
+                About
+            </a></li>
+            <li><a href="#contact">
+                Contact
+            </a></li>
+            <li><a href="#book" class="book">
+                Book A Table
+            </a></li>
+        </ul>
+    </nav>
+
+
+    <div class="banner" id="home">
+        <h1>
+            Good Food. Warm Welcome.
+        </h1>
+        <p>
+            Fresh meals, special events and a cozy place for the whole family.
+        </p>
+
+        <div class="banner-buttons">
+            <a href="#book" class="btn primary">
+                Book a Table
+            </a>
+            <a href="#gallery" class="btn outline">
+                See Our Gallery
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>
