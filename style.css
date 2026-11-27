@@ -1,37 +1,37 @@
-body{
- background: linear-gradient(135deg, #667eea 0% , #764ba2 100%);
- font-family: "Roboto Slab", serif;
+/* style.css */
+
+#social-media {
+ background: #2f3550;
 }
 
-.about {
- background-color: rgba(0, 0, 0, 0.6);
-
- border-radius: 15px;
-
- margin-top: 50px;
- margin-bottom: 40px;
-
+.m-heading{
+ font-weight: 700;
+ margin-top: 6px;
 }
 
-.m-heading {
- font-size: 2.5rem;
- font-weight: 700 ;
- margin: 20px 0 ;
-
+.media_link {
+ border: 2px solid #f2a900;
+ border-radius: 4px;
+ padding: 14px 18px;
+ margin-right: 18px;
+ background: transparent;
+ text-align: left;
 }
 
-.btn-outline-warning {
- border-width: 2px;
+
+.row.pt-5{
+ gap: 18px;
+}
+
+.media_link h3{
+ font-size: 16px;
  font-weight: 600;
- padding: 10px 30px;
- transition: all 0.3s;
 }
 
-
-.btn-outline-warning:hover {
- background-color: #deaa0caa;
- transform: scale(1.15);
+.media_link i{
+ font-size: 22px;
 }
 
-
-
+.media_link.bg-warning {
+ border: 2px solid #2f3550;
+}
